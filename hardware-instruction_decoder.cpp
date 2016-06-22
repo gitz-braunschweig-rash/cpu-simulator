@@ -86,4 +86,8 @@ void HardwareInstructionDecoder::delegateCommand(u_int16_t _command, u_int16_t _
     {
         storageUnit.executeCommand(_command,_secondHalfOfFirstOcted,_completeSecondOcted);
     }
+    else if(COMMAND_SET_STACK_POINTER == _command)
+    {
+        storageUnit.executeCommand(_command,_secondHalfOfFirstOcted,_completeSecondOcted);
+    }
 }

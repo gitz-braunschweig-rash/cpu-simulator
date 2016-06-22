@@ -163,6 +163,12 @@ void StorageUnit::executeCommand(u_int16_t _command, u_int16_t _secondHalfOfFirs
         pop(_secondHalfOfFirstOcted);
     }
 
+    else if(_command == COMMAND_SET_STACK_POINTER)
+    {
+        qDebug() << "COMMAND_SET_STACK_POINTER " << QString::number(((_secondHalfOfFirstOcted<<8) + _completeSecondOcted),16);
+        setStackPointer((_secondHalfOfFirstOcted<<8) + _completeSecondOcted);
+    }
+
     else
     {
         qDebug() << "[ERROR][STORAGE UNIT][executeCommand] received " << QString::number(_command,16) << QString::number(_secondHalfOfFirstOcted,16) << QString::number(_completeSecondOcted,16);
