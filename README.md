@@ -16,7 +16,7 @@ Opcode
 0xA 1010 jump_fixed
 0xB 1011 jump_register
 0xC 1100 branch_on_equal r1,r2,r_target
-0xD 1101 set_stack_pointer
+0xD 1101 set_stack_pointer address
 0xE 1110 load_register address r1, into r2
 0xF 1111 store_register value r1, into address r2
 
